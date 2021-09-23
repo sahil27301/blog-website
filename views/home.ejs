@@ -1,0 +1,22 @@
+<%- include('partials/header'); -%>
+    <h1>Home</h1>
+    <p>
+        <%=homeStart%>
+    </p>
+    <% posts.forEach(function(post){ %>
+        <h1>
+            <%= post.title %>
+        </h1>
+        <p class='content'>
+            <%= post.body %>
+        </p>
+        <a href="/posts/<%= post._id %>">Read More</a>
+        <% }); %>
+            <script>
+                $(".content").each(function () {
+                    if ($(this).text().length > 100) {
+                        $(this).text($(this).text().substr(0, 97) + '...');
+                    }
+                });
+            </script>
+            <%- include('partials/footer'); -%>
