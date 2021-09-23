@@ -20,7 +20,7 @@
 }
 
 .footer {
-  position: absolute;
+  position: fixed;
   text-align: center;
   bottom: 0;
   width: 100%;
@@ -36,4 +36,21 @@
 
 .content {
   display: inline-block;
+}
+
+.card-title {
+  font-size: x-large;
+  font-weight: 530;
+}
+
+/* .btn {
+  background-color: #1abc9c;
+} */
+
+.btn:hover {
+  background-color: #1abc9c;
+}
+
+.preserve-whitespace {
+  white-space: pre-wrap;
 }

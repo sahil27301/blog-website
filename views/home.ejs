@@ -3,20 +3,33 @@
     <p>
         <%=homeStart%>
     </p>
-    <% posts.forEach(function(post){ %>
-        <h1>
-            <%= post.title %>
-        </h1>
-        <p class='content'>
-            <%= post.body %>
-        </p>
-        <a href="/posts/<%= post._id %>">Read More</a>
-        <% }); %>
-            <script>
-                $(".content").each(function () {
-                    if ($(this).text().length > 100) {
-                        $(this).text($(this).text().substr(0, 97) + '...');
-                    }
-                });
-            </script>
-            <%- include('partials/footer'); -%>
+    <div class="row">
+
+        <% posts.forEach(function(post){ %>
+
+            <div class="col-sm-6 col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <%= post.title %>
+                        </h5>
+                        <p class="card-text content">
+                            <%= post.body %>
+                        </p>
+                        <a href="/posts/<%= post._id %>" class="btn btn-info" style="display:block;">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <% }); %>
+    </div>
+
+    <script>
+        $(".content").each(function () {
+            if ($(this).text().length > 175) {
+                $(this).text($(this).text().substr(0, 175) + '...');
+            }
+        });
+    </script>
+    <%- include('partials/footer'); -%>
