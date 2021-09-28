@@ -3,6 +3,12 @@
     <p>
         <%=homeStart%>
     </p>
+
+    <div class="search-area container-fluid">
+        <input type="text" placeholder="Start typing to search..." class="form-control search-input"
+            disabled="disabled">
+    </div>
+
     <div class="row">
 
         <% posts.forEach(function(post){ %>
@@ -10,7 +16,7 @@
             <div class="col-sm-6 col-md-4">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">
+                        <h5 class="card-title post-title">
                             <%= post.title %>
                         </h5>
                         <p class="card-text content">
@@ -21,11 +27,10 @@
                 </div>
             </div>
 
-
             <% }); %>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="/js/main.js"></script>
+    <script src="/js/index.js"></script>
     <%- include('partials/footer'); -%>
