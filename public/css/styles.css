@@ -1,3 +1,14 @@
+body::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
 .navbar {
   padding-top: 15px;
   padding-bottom: 15px;
@@ -50,19 +61,4 @@
 .search-area {
   padding-top: 20px;
   padding-bottom: 20px;
-  padding-left: 0;
-  text-align: center;
-}
-
-.search-input {
-  width: 20%;
-  margin: auto 0 0 0;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-.expand {
-  width: 67%;
 }
