@@ -23,7 +23,7 @@
                             <%= post.title %>
                         </h5>
                         <h5 class="card-title post-author">
-                            <%= post.user.displayName %>
+                            by <%= post.user.displayName %>
                         </h5>
                         <p class="card-text content">
                             <%= truncate(post.body, 175) %>
