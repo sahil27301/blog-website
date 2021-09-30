@@ -32,7 +32,7 @@ router.get('/dashboard', ensureAuth, async (_req, res) => {
       .populate('user')
       .sort({ createdAt: 'desc' })
       .lean();
-    res.render('home', {
+    res.render('index/home', {
       posts: posts,
       truncate: truncate,
     });
@@ -44,13 +44,13 @@ router.get('/dashboard', ensureAuth, async (_req, res) => {
 // @desc    About page
 // @route   GET /about
 router.get('/about', ensureAuth, (_req, res) => {
-  res.render('about');
+  res.render('index/about');
 });
 
 // @desc    Contact page
 // @route   GET /contact
 router.get('/contact', ensureAuth, (_req, res) => {
-  res.render('contact');
+  res.render('index/contact');
 });
 
 module.exports = router;

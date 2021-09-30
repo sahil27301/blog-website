@@ -9,7 +9,7 @@ const Post = require('../models/Post');
 // @desc    Create new blog page
 // @route   GET /posts/compose
 router.get('/compose', ensureAuth, (_req, res) => {
-  res.render('compose');
+  res.render('posts/compose');
 });
 
 // @desc    Create new blog page
@@ -30,7 +30,7 @@ router.post('/compose', ensureAuth, async (req, res) => {
 router.get('/:post_id', ensureAuth, async (req, res) => {
   // Ensure post_id is a 24 character hex string
   if (!req.params.post_id.match(/^[0-9a-f]{24}$/i)) {
-    res.render('error');
+    res.render('errors/error');
     return;
   }
 
@@ -39,9 +39,9 @@ router.get('/:post_id', ensureAuth, async (req, res) => {
       .populate('user')
       .lean();
     if (!post) {
-      res.render('error');
+      res.render('errors/error');
     } else {
-      res.render('post', { post: post });
+      res.render('posts/post', { post: post });
     }
   } catch (err) {
     console.log(err);

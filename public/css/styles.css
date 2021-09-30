@@ -68,3 +68,13 @@ body::-webkit-scrollbar {
   padding-top: 20px;
   padding-bottom: 20px;
 }
+
+.navbar-container {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.btn-primary {
+  background-color: #5c7aea;
+  border-color: #5c7aea;
+}
