@@ -1,8 +1,11 @@
 <%- include('partials/header'); -%>
     <h1>
-        <%=postName%>
+        <%=post.title%>
     </h1>
+    <h3>
+        <%=post.user.displayName%>
+    </h3>
     <p class="preserve-whitespace">
-        <%=postBody%>
+        <%=post.body%>
     </p>
     <%- include('partials/footer'); -%>

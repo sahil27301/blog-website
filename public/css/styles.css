@@ -46,9 +46,14 @@ body::-webkit-scrollbar {
   display: inline-block;
 }
 
-.card-title {
+.post-title {
   font-size: x-large;
   font-weight: 530;
+}
+
+.post-author {
+  font-size: medium;
+  font-weight: 450;
 }
 
 .btn:hover {
@@ -56,7 +61,7 @@ body::-webkit-scrollbar {
 }
 
 .preserve-whitespace {
-  white-space: pre-wrap;
+  white-space: pre-line;
 }
 
 .search-area {

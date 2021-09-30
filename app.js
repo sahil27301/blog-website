@@ -1,11 +1,10 @@
-const dotenv = require('dotenv').config();
+require('dotenv').config();
 const express = require('express');
 const { urlencoded, static } = require('express');
 const connectDB = require('./config/db');
 const passport = require('passport');
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
-const mongoose = require('mongoose');
 
 // passport config
 require('./config/passport')(passport);
