@@ -2,17 +2,20 @@ const express = require('express');
 
 const router = express.Router();
 
+const { ensureAuth } = require('../middleware/auth');
+
 const Post = require('../models/Post');
 
 // @desc    Create new blog page
 // @route   GET /posts/compose
-router.get('/compose', function (_req, res) {
+router.get('/compose', ensureAuth, function (_req, res) {
   res.render('compose');
 });
 
 // @desc    Create new blog page
 // @route   POST /posts/compose
-router.post('/compose', function (req, res) {
+router.post('/compose', ensureAuth, function (req, res) {
+  // TODO: Link question with user.
   const post = new Post({
     title: req.body.postTitle,
     body: req.body.postBody,
@@ -27,7 +30,8 @@ router.post('/compose', function (req, res) {
 
 // @desc    Get Single Blog
 // @route   GET /posts/:post_id
-router.get('/:post_id', function (req, res) {
+router.get('/:post_id', ensureAuth, function (req, res) {
+  // Ensure post_id is a 24 character hex string
   if (!req.params.post_id.match(/^[0-9a-f]{24}$/i)) {
     res.render('error');
     return;
