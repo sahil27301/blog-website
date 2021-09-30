@@ -25,7 +25,7 @@
                             <%= post.user.displayName %>
                         </h5>
                         <p class="card-text content">
-                            <%= post.body %>
+                            <%= truncate(post.body, 175) %>
                         </p>
                         <a href="/posts/<%= post._id %>" class="btn btn-info" style="display:block;">Read More</a>
                     </div>
