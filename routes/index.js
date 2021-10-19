@@ -17,15 +17,18 @@ truncate = (str, len) => {
   return str;
 };
 
-// TODO: Add login page
-// @desc    Login/Landing page
-// @route   GET /
+/**
+ * @desc    Login/Landing page
+ * @route   GET /
+ */
 router.get('/', ensureGuest, (_req, res) => {
   res.render('login');
 });
 
-// @desc    dashboard page
-// @route   GET /dashboard
+/**
+ * @desc    dashboard page
+ * @route   GET /dashboard
+ */
 router.get('/dashboard', ensureAuth, async (_req, res) => {
   try {
     const posts = await Post.find()
@@ -41,14 +44,18 @@ router.get('/dashboard', ensureAuth, async (_req, res) => {
   }
 });
 
-// @desc    About page
-// @route   GET /about
+/**
+ * @desc    About page
+ * @route   GET /about
+ */
 router.get('/about', ensureAuth, (_req, res) => {
   res.render('index/about');
 });
 
-// @desc    Contact page
-// @route   GET /contact
+/**
+ * @desc    Contact page
+ * @route   GET /contact
+ */
 router.get('/contact', ensureAuth, (_req, res) => {
   res.render('index/contact');
 });
