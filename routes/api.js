@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const Post = require('../models/Post');
+const User = require('../models/User');
 
 const compress = string => string.replace(/\s/g, '').toLowerCase();
 
@@ -7,7 +8,7 @@ const compress = string => string.replace(/\s/g, '').toLowerCase();
  * @desc    Fetch all posts
  * @route   GET /api/posts/
  */
-router.get('/posts', async (req, res) => {
+router.get('/posts', async (_req, res) => {
   try {
     const posts = await Post.find().lean().populate('user');
     res.send(posts);
@@ -124,7 +125,7 @@ router.post('/posts', async (req, res) => {
   const post = new Post(req.body);
   try {
     await post.save();
-    res.send('Posted successfully');
+    res.send(`Created a post with id ${post._id}`);
   } catch (err) {
     res.send(err);
   }
@@ -139,6 +140,32 @@ router.delete('/posts/:postId', async (req, res) => {
   try {
     await Post.findByIdAndDelete(postId);
     res.send('Deleted successfully');
+  } catch (err) {
+    res.send(err);
+  }
+});
+
+/**
+ * @desc    Fetch all users
+ * @route   GET /api/users
+ */
+router.get('/users', async (_req, res) => {
+  try {
+    const users = await User.find().lean();
+    res.send(users);
+  } catch (err) {
+    res.send(err);
+  }
+});
+
+/**
+ * @desc    Fetch user by ID
+ * @route   GET /api/users/:userId
+ */
+router.get('/users/:userId', async (req, res) => {
+  try {
+    const user = await User.findById(req.params.userId).lean();
+    res.send(user);
   } catch (err) {
     res.send(err);
   }
