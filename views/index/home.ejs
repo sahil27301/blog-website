@@ -22,8 +22,8 @@
                         <h5 class="card-title post-title">
                             <%= post.title %>
                         </h5>
-                        <img src="<%=post.user.image%>" class="profileImage" alt="profile image">
-                        <h5 class="card-title post-author" style="display: inline-block;">
+                        <h5 class="card-title post-author">
+                            <img src="<%=post.user.image%>" class="profileImage" alt="profile image">
                             <%= post.user.displayName %>
                         </h5>
                         <p class="card-text content">
