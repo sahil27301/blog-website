@@ -22,8 +22,9 @@
                         <h5 class="card-title post-title">
                             <%= post.title %>
                         </h5>
-                        <h5 class="card-title post-author">
-                            by <%= post.user.displayName %>
+                        <img src="<%=post.user.image%>" class="profileImage" alt="profile image">
+                        <h5 class="card-title post-author" style="display: inline-block;">
+                            <%= post.user.displayName %>
                         </h5>
                         <p class="card-text content">
                             <%= truncate(post.body, 175) %>

@@ -22,7 +22,7 @@ truncate = (str, len) => {
  * @route   GET /
  */
 router.get('/', ensureGuest, (_req, res) => {
-  res.render('login');
+  res.render('login', { GITHUB_CLIENT_ID: process.env.GITHUB_CLIENT_ID });
 });
 
 /**

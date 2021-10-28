@@ -1,5 +1,7 @@
 const express = require('express');
 const passport = require('passport');
+const axios = require('axios');
+const User = require('../models/User');
 
 const router = express.Router();
 
@@ -19,6 +21,15 @@ router.get(
     failureRedirect: '/,',
   }),
   (_req, res) => {
+    res.redirect('/dashboard');
+  },
+);
+
+router.get(
+  '/github/callback',
+  passport.authenticate('github', { failureRedirect: '/' }),
+  function (req, res) {
+    // Successful authentication, redirect home.
     res.redirect('/dashboard');
   },
 );

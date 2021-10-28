@@ -78,3 +78,39 @@ body::-webkit-scrollbar {
   background-color: #5c7aea;
   border-color: #5c7aea;
 }
+
+.login {
+  margin: 20px 0;
+}
+
+.login-body {
+  text-align: center;
+  background-image: url('/images/blog.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.login-container {
+  margin-top: 400px;
+}
+
+.lead {
+  font-weight: 700;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+.profileImage {
+  border-radius: 50%;
+  height: 1.2rem;
+}
+
+.profileImageLarge {
+  border-radius: 50%;
+  margin: 10px;
+  float: left;
+  height: 10rem;
+}
