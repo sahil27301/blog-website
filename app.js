@@ -42,6 +42,8 @@ app.use('/auth', require('./routes/auth'));
 
 app.use('/api', require('./routes/api'));
 
+app.use('/twitter', require('./routes/twitter'));
+
 app.listen(3000, () => {
   console.log('Server started on port 3000');
 });

@@ -34,7 +34,9 @@ module.exports = function (passport) {
       },
     ),
   );
-
+  /**
+   * TODO: Use profile instead of accessToken
+   */
   passport.use(
     new GitHubStrategy(
       {

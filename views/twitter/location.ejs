@@ -1,0 +1,12 @@
+<%- include('../partials/header'); -%>
+    <h3>Find out what's trending near you!</h3>
+    <button type="submit" class="btn btn-primary" id="api">VIEW API</button>
+    <button type="submit" class="btn btn-primary" id="graphical">VIEW GRAPHICAL INTERFACE</button>
+    <form action="/twitter/location" method="POST" id="location_form">
+        <label for="phoneNumber">Enter your phone number to receive WhatsApp updates</label>
+        <input type="text" name="phoneNumber" id="phoneNumber">
+        <input type="hidden" name="latitude" id="latitude">
+        <input type="hidden" name="longitude" id="longitude">
+    </form>
+    <script src="/js/location.js"></script>
+    <%- include('../partials/footer'); -%>

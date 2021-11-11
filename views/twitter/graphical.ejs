@@ -1,0 +1,16 @@
+<%- include('../partials/header'); -%>
+    <div class="container">
+        <h3>See what's trending and get inspiration!</h3>
+        <br>
+        <% trending_tweets.forEach((trending_tweet)=> { %>
+            <h3>Tag - <%=trending_tweet.trend%>
+            </h3>
+            <br>
+            <% trending_tweet.tweets.forEach(tweet=> { %>
+                <%-tweet%>
+                    <br>
+                    <%})%>
+                        <%})%>
+
+    </div>
+    <%- include('../partials/footer'); -%>
