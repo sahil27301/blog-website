@@ -1,116 +1,122 @@
 body::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 * {
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 .navbar {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  border: 0;
-  border-radius: 0;
-  margin-bottom: 0;
-  font-size: 12px;
-  letter-spacing: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
 }
+
 .navbar-nav li a:hover {
-  color: #1abc9c !important;
+    color: #1abc9c !important;
 }
 
 .footer-padding {
-  padding-bottom: 60px;
-  margin-top: 20px;
+    padding-bottom: 60px;
+    margin-top: 20px;
 }
 
 .footer {
-  position: fixed;
-  text-align: center;
-  bottom: 0;
-  width: 100%;
-  height: 60px;
-  background-color: #1abc9c;
+    position: fixed;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #1abc9c;
 }
 
 .footer p {
-  margin-top: 25px;
-  font-size: 16px;
-  color: #fff;
+    margin-top: 25px;
+    font-size: 16px;
+    color: #fff;
 }
 
 .content {
-  display: inline-block;
+    display: inline-block;
 }
 
 .post-title {
-  font-size: x-large;
-  font-weight: 530;
+    font-size: x-large;
+    font-weight: 530;
 }
 
 .post-author {
-  font-size: medium;
-  font-weight: 450;
+    font-size: medium;
+    font-weight: 450;
 }
 
 .btn:hover {
-  background-color: #1abc9c;
+    background-color: #1abc9c;
 }
 
 .preserve-whitespace {
-  white-space: pre-line;
+    white-space: pre-line;
 }
 
 .search-area {
-  padding-top: 20px;
-  padding-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .navbar-container {
-  padding-top: 15px;
-  padding-bottom: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .btn-primary {
-  background-color: #5c7aea;
-  border-color: #5c7aea;
+    background-color: #5c7aea;
+    border-color: #5c7aea;
 }
 
 .login {
-  margin: 20px 0;
+    margin: 20px 0;
 }
 
 .login-body {
-  text-align: center;
-  background-image: url('/images/blog.jpeg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+    text-align: center;
+    background-image: url('/images/blog.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .login-container {
-  margin-top: 400px;
+    margin-top: 400px;
 }
 
 .lead {
-  font-weight: 700;
+    font-weight: 700;
 }
 
 .title {
-  font-size: 3rem;
+    font-size: 3rem;
 }
 
 .profileImage {
-  border-radius: 50%;
-  height: 1.2rem;
+    border-radius: 50%;
+    height: 1.2rem;
 }
 
 .profileImageLarge {
-  border-radius: 50%;
-  margin: 10px;
-  float: left;
-  height: 10rem;
+    border-radius: 50%;
+    margin: 10px;
+    float: left;
+    height: 10rem;
+}
+
+.scraping-dropdown {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
 }
