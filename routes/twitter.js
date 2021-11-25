@@ -4,6 +4,7 @@ const client = require('twilio')(
   process.env.TWILIO_ACCOUNT_SID,
   process.env.TWILIO_AUTH_TOKEN,
 );
+const { ensureAuth } = require('../middleware/auth');
 
 const make_async_request = options => {
   return new Promise((resolve, reject) => {
@@ -97,7 +98,7 @@ const extractTweetHtml = async trending_tweet => {
   };
 };
 
-router.post('/location/graphical', async (req, res) => {
+router.post('/location/graphical', ensureAuth, async (req, res) => {
   const options = {
     url: 'http://localhost:3000/twitter/location/',
     method: 'POST',
@@ -142,7 +143,6 @@ router.post('/location', async (req, res) => {
   res.send(trending_tweets);
   if (!phoneNumber) return;
   let message = '';
-  console.log(trending_tweets[0]);
   for (let trending_tweet of trending_tweets) {
     message += `${trending_tweet.trend}\n\nTweets:\n\n`;
     message += `${trending_tweet.tweets[0].text}\n`;
