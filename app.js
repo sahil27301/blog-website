@@ -20,14 +20,14 @@ app.use(static('public'));
 
 // Sessions
 app.use(
-  session({
-    secret: process.env.SESSION_SECRET,
-    resave: false,
-    saveUninitialized: false,
-    store: MongoStore.create({
-      mongoUrl: process.env.MONGO_URI,
+    session({
+        secret: process.env.SESSION_SECRET,
+        resave: false,
+        saveUninitialized: false,
+        store: MongoStore.create({
+            mongoUrl: process.env.MONGO_URI,
+        }),
     }),
-  }),
 );
 
 // Passport middleware
@@ -44,6 +44,8 @@ app.use('/api', require('./routes/api'));
 
 app.use('/twitter', require('./routes/twitter'));
 
+app.use('/scraping', require('./routes/scraping'));
+
 app.listen(3000, () => {
-  console.log('Server started on port 3000');
+    console.log('Server started on port 3000');
 });
